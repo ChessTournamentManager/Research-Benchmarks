@@ -1,0 +1,23 @@
+version: "3.9"
+
+name: Research Benchmarks
+services:
+  research-db-redis:
+    container_name: research-db-redis
+    restart: always
+    image: redis:7.0.5-alpine
+    ports:
+      - "6400:6379"
+    expose:
+      - "6400"
+  research-db-mongo:
+    container_name: research-db-mongo
+    restart: always
+    image: mongo:5.0.14
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=password
+    ports:
+      - "6401:27017"
+    expose:
+      - "6401"
