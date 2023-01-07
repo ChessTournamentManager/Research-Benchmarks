@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.1</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.chesstournamentmanager</groupId>
+	<artifactId>spring-jmh-redis</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<name>spring-jmh-redis</name>
+	<description>Demo project for demonstrating how to do benchmark testing in spring boot with JMH and Redis.</description>
+	<properties>
+		<java.version>18</java.version>
+		<jmh.version>1.36</jmh.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-redis</artifactId>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/io.lettuce/lettuce-core -->
+		<dependency>
+			<groupId>io.lettuce</groupId>
+			<artifactId>lettuce-core</artifactId>
+			<version>6.2.1.RELEASE</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-core -->
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-core</artifactId>
+			<version>${jmh.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.openjdk.jmh/jmh-generator-annprocess -->
+		<dependency>
+			<groupId>org.openjdk.jmh</groupId>
+			<artifactId>jmh-generator-annprocess</artifactId>
+			<version>${jmh.version}</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+</project>
